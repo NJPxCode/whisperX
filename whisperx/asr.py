@@ -330,6 +330,7 @@ def load_model(
     model: Optional[WhisperModel] = None,
     task="transcribe",
     download_root=None,
+    local_files_only=False,
     threads=4,
 ):
     """Load a Whisper model for inference.
@@ -355,6 +356,7 @@ def load_model(
         device_index=device_index,
         compute_type=compute_type,
         download_root=download_root,
+        local_files_only=local_files_only,
         cpu_threads=threads,
     )
     if language is not None:
